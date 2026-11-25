@@ -1,0 +1,57 @@
+{
+  "obsidianVaultPath": "./vault",
+  "onboarding": {
+    "completed": false
+  },
+  "llm": {
+    "protocol": "openai_compatible",
+    "provider": "minimax",
+    "apiKey": "",
+    "baseUrl": "https://api.minimaxi.com/v1",
+    "models": [
+      {
+        "id": "minimax-m3",
+        "label": "MiniMax M3",
+        "apiModel": "MiniMax-M3"
+      }
+    ],
+    "roles": {
+      "primary": "minimax-m3",
+      "fast": "",
+      "vision": "",
+      "fallback": ""
+    },
+    "modelId": "minimax-m3",
+    "model": "MiniMax-M3",
+    "fastModel": "",
+    "visionModel": "",
+    "fallbackModel": ""
+  },
+  "report": {
+    "outputDir": "./vault/reports",
+    "stepConfirm": false,
+    "intakeSkillId": "strategic-planning-intake",
+    "researcherSkillId": "strategic-planning-researcher",
+    "architectSkillId": "strategic-planning-architect",
+    "writerSkillId": "strategic-planning-writer",
+    "citerSkillId": "strategic-planning-citer",
+    "reviewSkillId": "strategic-planning-reviewer",
+    "optimizerSkillId": "strategic-planning-optimizer",
+    "writerConcurrency": 3,
+    "writerMaxTokens": 4096,
+    "writerChunkChars": 3200,
+    "writerMaxAttempts": 4,
+    "writerReasoningMaxChars": 6000,
+    "optimizerMaxRounds": 5,
+    "optimizerPassScore": 85
+  },
+  "search": {
+    "webSearchMode": "auto",
+    "webSearchEnabled": false,
+    "webSearchSkillId": "web-search"
+  },
+  "data": {
+    "excelRoots": ["./vault"],
+    "databases": []
+  }
+}

@@ -1,0 +1,36 @@
+---
+description: 双路径 Agent、名册、证据 ID、报告 Skill 可导入、MiniMax M3
+alwaysApply: true
+---
+
+# 双路径与子 Agent
+
+## 路径
+
+- **轻量**：普通提问 → 知识检索 ± 问数（工作台；不跳转写作）。
+- **报告**：仅「写作」页 → 战略六步 Skill 流水线；检索/问数为写作内工具（知识卡片）。
+- 默认模型：全员 **MiniMax M3**。
+
+## 报告 Agent（写作页）
+
+`intake` → `researcher` → `architect` → `writer` → `citer` → `reviewer` → `optimizer`
+
+- 检索/问数/联网：由 researcher/writer 调用，产出知识卡片（非顶层并列 Agent）；`intake` 仅本地摸底出题。
+- `writer` **禁止**证据包外具体数字；按报告类型字数底线逐章撰写。
+- `reviewer` 含 **管网适配**与七维评分；`optimizer` 最多 5 轮自动改稿。
+- 默认自动跑完；支持高级「逐步确认」（大纲 / 章节）。
+- 写作联网受 `config/web_whitelist.json` 约束；`off` 零联网。
+- 产出：预览 + 导出 MD/Word + 写入 Vault 目录。
+
+## 证据 ID
+
+`kb:` / `data:` / `viz:` / `web:` — 详见 `docs/TECH.md`。
+
+## Skill
+
+- 报告六步均绑定可热替换 Skill（默认 `strategic-planning-*`）。
+- 支持维护与导入，不改代码可扩展。
+
+## 问数
+
+Excel/CSV 为主，可配外接只读库；多 Sheet/多文件关联；SQL 只读；写作过程中可调用并展示为知识卡片。

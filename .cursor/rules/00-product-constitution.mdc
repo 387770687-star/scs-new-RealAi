@@ -1,0 +1,28 @@
+---
+description: RealAi 产品形态与技术路线宪法（不可违背）
+alwaysApply: true
+---
+
+# 产品宪法
+
+## 必须
+
+- 交付形态：Windows **便携 exe / 便携目录**；**无 Docker 主路径**（内嵌 Python/Node 运行时）。
+- 交互形态：exe 启动 **桌面端**（Electron + **Vue 主前端**；DeerFlow React UI 封存可菜单打开），非纯网页 SaaS。
+- 知识存放：**Obsidian Vault**。
+- 底层智能：基于 **DeerFlow 二次开发**（唯一主引擎；vendoring 于 `services/deerflow/`）。
+- 能力路径：**轻量问答**（工作台：检索±问数）与 **战略写作六步流水线**（仅「写作」页；检索/问数为写作内工具）。
+- Skill：**目标能力**为维护、查看、执行与**导入**（报告 Agent 可加载）；**P3 前可不交付**完整 Skill 产品能力（P1b 仅预留挂钩点即可）。
+- 算力：仅 **国内 API**；默认 **MiniMax M3**。
+
+## 禁止
+
+- 主产品改为仅云端网页；最终用户必装 Docker。
+- 抛弃 Vault 或抛弃 DeerFlow 另立并行主引擎。
+- 境外主模型为默认/唯一算力。
+- 报告写作使用证据包之外的具体数字。
+- **自 P3 起**：对外宣称或暴露 Skill 入口后，却无法维护/查看/执行/导入（半残 Skill）。
+
+## 冲突处理
+
+与本宪法冲突时以本宪法为准，并同步 README / TECH。

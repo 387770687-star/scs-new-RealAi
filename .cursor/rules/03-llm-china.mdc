@@ -1,0 +1,33 @@
+---
+description: 仅使用国内大模型 API；默认 MiniMax M3；密钥外置
+alwaysApply: true
+---
+
+# 国内 LLM 规范
+
+## 必须
+
+- 主算力仅限国内互联网模型 API；**默认 MiniMax M3**（可配置切换其他国内厂商）。
+- 模型调用经 **DeerFlow 定制层**统一接入（设置页写入配置）；禁止渲染进程直连散落 SDK。
+- API Key 只放外置配置，**禁止提交到 git**。
+- 错误信息对用户可读（额度不足、Key 无效、网络失败等）。
+
+## 禁止
+
+- 默认接入或依赖境外主模型作为产品算力。
+- 在源码、README 示例中写入真实 Key。
+
+## 配置约定（示例字段）
+
+```json
+{
+  "llm": {
+    "provider": "minimax",
+    "apiKey": "",
+    "model": "MiniMax-M3",
+    "baseUrl": ""
+  }
+}
+```
+
+新增国内厂商时：扩展 DeerFlow/配置适配，更新设置 UI 与 README/TECH。

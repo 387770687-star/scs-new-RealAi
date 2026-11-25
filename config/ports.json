@@ -1,0 +1,10 @@
+{
+  "frontend": 8400,
+  "vueFrontend": 8402,
+  "gateway": 8401,
+  "proxy": 8426,
+  "sandbox": 8480,
+  "browserless": 8432,
+  "qdrant": 8433,
+  "searxng": 8488
+}

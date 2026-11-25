@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 24px;
+  background: #f5f8fe;
+  color: #111827;
+}
+header h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.sub { color: #6b7280; margin: 0 0 20px; }
+.panel {
+  background: #fff;
+  border: 1px solid rgba(57, 126, 236, 0.14);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+label { display: block; margin: 10px 0; font-size: 0.9rem; }
+input, textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(57, 126, 236, 0.24);
+  background: #fff;
+  color: inherit;
+}
+.actions { display: flex; gap: 10px; margin-top: 12px; }
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #397eec;
+  color: #fff;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.hint { color: #025bfe; font-size: 0.85rem; }
+pre {
+  white-space: pre-wrap;
+  background: #f2f7ff;
+  padding: 12px;
+  border-radius: 8px;
+  min-height: 80px;
+  border: 1px solid rgba(57, 126, 236, 0.14);
+}

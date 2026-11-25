@@ -1,0 +1,89 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.Python
+
+# Secrets & local config
+.env
+.env.*
+!.env.example
+config/settings.local.json
+config/*.local.*
+
+# Build & portable output
+dist/
+out/
+release/
+*.exe
+!docs/**/*.exe
+
+# IDE / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs & caches
+*.log
+logs/
+.cache/
+tmp/
+/runtime/
+apps/desktop/node_modules/
+node_modules/
+temp/
+
+# User knowledge & runtime data (keep structure via .gitkeep if needed)
+vault/**
+!vault/.gitkeep
+
+# Local DeerFlow / runtime caches (if any)
+services/deerflow/data/
+services/deerflow/.cache/
+services/deerflow/.deer-flow/
+services/deerflow/**/__pycache__/
+services/deerflow/**/node_modules/
+services/deerflow/**/.venv/
+services/deerflow/backend/.venv/
+services/deerflow/config.yaml
+services/deerflow/.env
+services/deerflow/logs/
+services/deerflow/frontend/.next/
+services/deerflow/frontend/out/
+*.bin
+*.gguf
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Machine credentials and application state
+/config/settings.json
+/config/realai.runtime.json
+/config/extensions_config.json
+/config/removed_skills.json
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-shm
+*.db-wal
+.deer-flow/
+.history/
+.venv.backup.*/
+.ruff_cache/
+.pytest_cache/
+.agent/
+*.tsbuildinfo
+*.bak
+/_vault_backup_*/
+/raw/
+/presentation/
+/services/vault/
+/services/config/

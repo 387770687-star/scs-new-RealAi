@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>战略规划域多源多模态知识大脑 · 设置与通聊</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>战略规划域多源多模态知识大脑</h1>
+    <p class="sub">P0：设置 MiniMax Key → 保存 → 发送测试消息</p>
+  </header>
+
+  <section class="panel">
+    <h2>设置（唯一入口）</h2>
+    <label>Obsidian Vault 路径<input id="vaultPath" type="text" /></label>
+    <label>MiniMax API Key<input id="apiKey" type="password" autocomplete="off" /></label>
+    <label>模型<input id="model" type="text" /></label>
+    <label>API Base URL<input id="baseUrl" type="text" /></label>
+    <div class="actions">
+      <button id="saveBtn">保存配置</button>
+      <button id="openFolderBtn" type="button">打开配置目录</button>
+    </div>
+    <p id="saveStatus" class="hint"></p>
+  </section>
+
+  <section class="panel">
+    <h2>通聊测试</h2>
+    <textarea id="prompt" rows="3" placeholder="输入一句话，例如：你好，请用一句话介绍你自己。"></textarea>
+    <button id="sendBtn">发送</button>
+    <pre id="reply"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

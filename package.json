@@ -1,0 +1,37 @@
+{
+  "name": "realai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RealAi desktop shell (Vue UI + DeerFlow engine)",
+  "workspaces": [
+    "apps/desktop"
+  ],
+  "scripts": {
+    "desktop": "npm run start --workspace=realai-desktop",
+    "desktop:dev": "npm run dev --workspace=realai-desktop",
+    "dev": "node scripts/dev-all.js",
+    "dev:mac": "zsh ./Start-RealAi-Dev.command",
+    "dev:build": "node scripts/dev-all.js --build",
+    "backend:sync": "cd services/deerflow/backend && uv sync --python 3.12",
+    "backend:start": "node scripts/start-backend.js",
+    "web:install": "cd apps/web && npm install --ignore-scripts && node ./node_modules/esbuild/install.js",
+    "web:dev": "cd apps/web && npm run dev",
+    "web:build": "cd apps/web && npm run build",
+    "frontend:install": "cd services/deerflow/frontend && pnpm install",
+    "frontend:dev": "node scripts/frontend-dev.js",
+    "frontend:build": "cd services/deerflow/frontend && pnpm build",
+    "p0:check": "node scripts/p0-check.js",
+    "p1:check": "node scripts/p1-check.js",
+    "p2:check": "node scripts/p2-check.js",
+    "p3:check": "node scripts/p3-check.js",
+    "p4:pack": "node scripts/pack-portable.js",
+    "p4:check": "node scripts/p4-check.js",
+    "skills:zh": "node scripts/sync-skills-zh-frontmatter.js",
+    "skills:restore-en": "node scripts/restore-deerflow-skills-en.js",
+    "dev:mac:web": "zsh ./Start-RealAi-Web.command",
+    "test:setup": "node --test tests/setup.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

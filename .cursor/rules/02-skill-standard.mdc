@@ -1,0 +1,49 @@
+---
+description: RealAi 标准 Skill：目录、SKILL.md 字段；完整产品能力自 P3 起
+alwaysApply: true
+---
+
+# Skill 标准
+
+## 目录
+
+```text
+skills/<skill-id>/SKILL.md
+```
+
+- `skill-id`：小写字母、数字、连字符（如 `daily-digest`）。
+- 每条 Skill 一个文件夹；入口文件必须是 `SKILL.md`。
+
+## SKILL.md 必填
+
+Frontmatter：
+
+```yaml
+---
+name: daily-digest
+description: 一句话说明用途（查看列表时展示）
+---
+```
+
+正文至少包含：做什么、怎么执行（步骤或约定输入输出）。
+
+## 交付节奏
+
+- **P3 前**：可不交付 Skill 产品能力；报告路径（P1b）仅预留 Skill 挂钩点即可。
+- **自 P3 起**：下列四项能力缺一不可；一旦对外暴露 Skill 入口，不得半残交付。
+
+## 产品能力（P3 起缺一不可）
+
+| 能力 | 要求 |
+|------|------|
+| 查看 | 列出 name/description，可打开完整 SKILL.md |
+| 维护 | 支持新增、编辑、删除（含校验必填字段） |
+| 执行 | 按 Skill 约定运行并返回结果/错误信息 |
+| 导入 | 支持应用内/后台导入 Skill 包到 `skills/`，供报告写作/评审等 Agent 加载 |
+
+## 必须 / 禁止
+
+- 必须（P3）：官方示例 Skill 随包提供；报告相关 Agent 可绑定并热替换 Skill。
+- 必须（P3）：无效 Skill（缺 name/description）在查看时标红或提示，执行前拦截。
+- 禁止：把 Skill 做成无法浏览的纯二进制黑盒作为唯一形态。
+- 禁止：执行路径绕过项目安全边界（随意跑不明脚本且无确认）——需确认或白名单策略时在实现中明确。

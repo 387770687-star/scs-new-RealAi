@@ -1,0 +1,21 @@
+---
+description: DeerFlow vendoring、无 Docker、内嵌运行时、配置唯一入口
+alwaysApply: true
+---
+
+# DeerFlow Vendoring
+
+## 必须
+
+- 源码整份位于 `services/deerflow/`，允许直接改上游。
+- 记录来源版本（如 `VENDOR.md`）；**保留**目录内上游 LICENSE。
+- Windows **内嵌 Python/Node** 拉起后端；开发与发布均不以 Docker 为主路径。
+- Electron 默认加载 **Vue 主前端**（`apps/web/`）；壳负责启停后端与 Vue；DeerFlow React 前端可菜单按需打开。
+- RealAi **系统管理 / 模型中心**为配置主入口，写入 DeerFlow 可读配置。
+
+## 禁止
+
+- 另立第二套主 Agent 引擎。
+- 要求最终用户安装 Docker 才能用主功能。
+- 删除 vendored 树中的上游 LICENSE 文件。
+- 产品 UI 强制展示冗长第三方致谢（README 保持干净即可）。

@@ -1,0 +1,14 @@
+{
+  "name": "realai-desktop",
+  "productName": "战略规划域多源多模态知识大脑",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "devDependencies": {
+    "electron": "^35.7.5"
+  }
+}

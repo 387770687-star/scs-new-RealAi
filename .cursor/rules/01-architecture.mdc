@@ -1,0 +1,32 @@
+---
+description: RealAi 架构：Electron、Vue 主前端、DeerFlow vendoring、Vault、双路径
+alwaysApply: true
+---
+
+# 架构约束
+
+## 模块
+
+| 模块 | 落位 |
+|------|------|
+| Vue 主前端 | `apps/web/` |
+| Electron 壳 | `apps/desktop/` |
+| DeerFlow 二开 | `services/deerflow/`（React UI 封存，默认可不启动） |
+| Vault | `vault/` 或配置路径 |
+| Skills | `skills/` |
+| 配置 | `config/`（系统管理 / 模型中心写入） |
+
+## 必须
+
+- 前端主界面：**Vue**（Naive UI，左菜单 + 右内容）；Electron 默认加载 Vue；后端独立进程、内嵌运行时。
+- 智能主路径只经 DeerFlow；禁止并行自研主引擎。
+- 轻量问答 ≠ 报告全链路；报告须用户显式入口（写作任务）。
+- 未勾选联网不得调用浏览/搜索。
+- 循证用**证据栏/抽屉**；证据 ID 见 TECH / 规则 08。
+- 共用 API 变更须同步 Vue 客户端与封存的 DeerFlow 前端客户端。
+
+## 禁止
+
+- Docker 作为交付前提；渲染进程硬编码 Key。
+- 知识库内容默认进 git。
+- 删除封存的 DeerFlow 前端源码（可保留入口，不作为主 UI）。
