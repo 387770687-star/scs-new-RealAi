@@ -4,18 +4,19 @@
 
 **Mac 启动说明：[docs/MAC_START.md](docs/MAC_START.md)**
 
+**直接下载：[源码 ZIP](https://github.com/387770687-star/scs-new-RealAi/archive/refs/heads/main.zip)**，解压后按 Mac 启动说明运行。也可以通过 Git 获取：
+
 ```bash
-brew install node uv gh
-gh auth login
+brew install node uv
 mkdir -p ~/Developer && cd ~/Developer
-gh repo clone 387770687-star/scs-new-RealAi
+git clone https://github.com/387770687-star/scs-new-RealAi.git
 cd scs-new-RealAi
 ./Start-RealAi-Web.command
 ```
 
 浏览器访问 **http://127.0.0.1:8402/**。桌面版运行 `./Start-RealAi-Dev.command`。首次启动自动创建配置并安装依赖；在模型中心填写自己的 Key、服务地址和模型 ID。
 
-仓库设为私有，同事接受仓库邀请后即可克隆。本机密钥、业务资料、历史会话和生成报告保留在各自电脑，仓库提供示例资料与空密钥模板。
+仓库公开，任何人都可以直接浏览、下载或克隆。本机密钥、业务资料、历史会话和生成报告保留在各自电脑，仓库提供示例资料与空密钥模板。
 
 以下保留原项目功能与开发手册。
 

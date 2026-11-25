@@ -6,23 +6,22 @@
 
 仓库地址：https://github.com/387770687-star/scs-new-RealAi
 
-这是私有仓库。仓库所有者在 GitHub 的 **Settings → Collaborators → Add people** 添加同事的 GitHub 账号；同事接受邀请后再克隆。
+仓库公开，直接打开链接即可浏览和下载。点击 [下载源码 ZIP](https://github.com/387770687-star/scs-new-RealAi/archive/refs/heads/main.zip)，或在仓库页面选择 **Code → Download ZIP**。
 
 建议把代码放在 `~/Developer`，让源码、Python 环境和 SQLite 数据库始终保留在本地磁盘。桌面和文稿目录可能由 iCloud 自动转为云端占位文件，进程读文件时会等待下载。
 
 已安装 Homebrew 的 Mac：
 
 ```bash
-brew install node uv gh
+brew install node uv
 # Node.js 22 或更高版本；Python 3.12 由 uv 自动准备。
-gh auth login
 mkdir -p ~/Developer
 cd ~/Developer
-gh repo clone 387770687-star/scs-new-RealAi
+git clone https://github.com/387770687-star/scs-new-RealAi.git
 cd scs-new-RealAi
 ```
 
-也可以在登录 GitHub 后通过网页 Download ZIP 获取源码。Homebrew 安装入口为 https://brew.sh/ 。
+通过 ZIP 获取代码时，把解压出的 `scs-new-RealAi-main` 文件夹放到 `~/Developer`，安装 `node` 和 `uv` 后，在终端进入该文件夹，继续以下启动步骤。Homebrew 安装入口为 https://brew.sh/ 。
 
 ## 2. 启动浏览器版
 
